@@ -91,6 +91,11 @@ app.get("/api/movies", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({ message: "Server is running", routes: ["/health", "/api/hello", "/api/books", "/api/movies"] });
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`SQL configured: ${Boolean(pgPool)}, NoSQL configured: ${Boolean(ddb)}`);
