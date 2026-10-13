@@ -127,7 +127,6 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
   console.log(`SQL configured: ${Boolean(pgPool)}, NoSQL configured: ${Boolean(ddb)}`);
